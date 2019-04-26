@@ -11,7 +11,8 @@
 }
 .maincontent .center{
    width: 800px;
-   border:1px solid #565656
+   border:1px solid #565656;
+   margin:0 10px;
 }
 .m1>.left,
 .m1>.right,
