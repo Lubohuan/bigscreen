@@ -1,0 +1,119 @@
+<div class="jbox-title clearfix special-title" style="padding-top:0;">
+	<div class="h5 pull-left">
+	<div class="site-item" style="width:75px;height:20px;border:none;">
+        <div class="site-item-front">
+            <span style="color:#00ACED">微博热点</span>
+        </div>
+        <div class="site-item-back">
+            <span style="color:#00ACED">微信热点</span>
+        </div>
+    </div>
+	</div>
+</div>
+<div class="jbox-content">
+	<div id="siteItem-list">
+		<!-- <div class="site-item">
+			<div class="site-item-front">
+				<a class="link_list" title="欧亚经济论坛“一带一路”女性论坛举行" href="javascript:;" >
+					<div class="site-item-body">
+						以快乐之名，与你相遇，↵我的青春有你，你的快乐有我，↵20岁，谢谢亲爱的你，↵陪我从过去到现在和未来↵前路可期，一直在一起！↵#快乐大本营二十周年#↵@何炅 @谢娜 @李维嘉 @吴昕 @杜海涛
+					</div>
+					<div class="site-item-foot ">
+						<div class="site-item-foot-a pull-left">陕西传媒网</div>
+						<div class="site-item-foot-b pull-right">2017-09-23 07:10:00</div>
+					</div>
+				</a>
+			</div>
+			<div class="site-item-back">
+				<a class="link_list" title="欧亚经济论坛“一带一路”女性论坛举行" href="javascript:;">
+					<div class="site-item-body">
+						昂萨莉说 ，随着女性社会地位的提高 ，举办<font class="media-keyWord"> “一带一路 ”</font>女性论坛意义非凡 。
+					</div>
+					<div class="site-item-foot clearfix">
+						<div class="site-item-foot-a pull-left">陕西传媒网</div>
+						<div class="site-item-foot-b pull-right">2017-09-23 07:10:00</div>
+					</div>
+				</a>
+			</div>
+		</div> -->
+	<!--siteItem-list end -->
+	</div>
+</div>
+<script>
+//翻转效果
+/* function rotateInorder(){	
+$(".special-title").find(".site-item").toggleClass("flip")	
+	$("#siteItem-list").find(".site-item").each(function(i){
+         (function(t,q){
+        	setTimeout(function(){
+            	q.toggleClass("flip");
+            	
+            	if(t==0){
+		         	 
+	         	}
+             },(t+1)*300);
+          })(i,$(this));
+         
+         
+    });
+}
+setTimeout(rotateInorder,1000)
+setInterval(rotateInorder, 6900); */
+$(function(){
+    getRotateList();
+    setInterval(getRotateList,600000);
+    function getRotateList(){
+            $.ajax({
+                type:"POST",
+                url:"platform_al/mod11/searchSortByRequest",
+                success:function(data){
+                /*  <div class="site-item-foot-a pull-left">互动量:${val.weibinter}</div>
+                     <div class="site-item-foot-a pull-left">互动量:${val.weixininter}</div> */
+                    var html=""
+                    $.each(data,function(index,val){  
+                      html+=` 
+                        <div class="site-item">
+                                <div class="site-item-front">
+                                    <div class="site-item-body">
+                                        <a href="${val.weibourl}" target="_Blank">${val.weibotitle}</a>
+                                    </div>
+                                    <div class="site-item-foot clearfix">
+                                    	<div class="site-item-foot-a pull-left">发布者:${val.weibouser}</div>
+                                    	
+                                        <div class="site-item-foot-b pull-right">${val.weibopubtime}</div>
+                                    </div>
+                                </div>
+                                <div class="site-item-back">
+                                    <div class="site-item-body">
+                                      <a href="${val.weixinurl}" target="_Blank">${val.weixintitle}</a>
+                                    </div>
+                                    <div class="site-item-foot clearfix">
+                                    <div class="site-item-foot-a pull-left">发布者:${val.weixinuser}</div>
+                                   
+                                    <div class="site-item-foot-b pull-right">${val.weixinpubtime}</div>
+                                    </div>
+                                </div>
+                            </div>`
+                    })
+                    $("#siteItem-list").html(html);
+                    setTimeout(rotateInorder,1000)
+                    setInterval(rotateInorder,6900);
+                }
+            })
+        }
+})
+function rotateInorder(){
+    $(".special-title").find(".site-item").toggleClass("flip")
+    $("#siteItem-list").find(".site-item").each(function(i){
+        (function(t,q){
+            setTimeout(function(){
+                q.toggleClass("flip");
+                if(t==0){
+                }
+            },(t+1)*300);
+        })(i,$(this));
+
+
+    });
+}
+</script>

@@ -1,0 +1,94 @@
+<div class="jbox-title clearfix" style="padding-top:0;">
+	<div class="h5 pull-left twinkling">
+		<!-- <i class="fa fa-stop"></i> --> 实时数据
+	</div>
+</div>
+<div class="jbox-content">
+
+	<!-- <div class="new_list5a new_list_top" style="clear: both;">
+		<ul id="realTime-visitList" class="list-unstyled custom-content-box1"></ul>
+		<input type="text" hidden class="hide_id5a" value="-1">
+	</div> -->
+	<ul id="realTime-visitList" class="list-unstyled custom-content-box1">
+	</ul>
+</div>
+<!-- <script>
+$.ajax({
+        type:"POST",
+        url:"platform_al/mod11/searchNewsByTime",
+        success:function(data){
+            var html="";
+            $.each(data,function(index,val){
+                if(index<=5){
+                    html+=`<li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">${val.pubtime}</h4>
+                                <div class="media-main custom-lrmove">
+                                    <p class="custom-lrmove">
+                                        ${val.title}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>`
+                }
+
+            })
+            $("#realTime-visitList").html(html);
+        }
+    })
+setInterval(function(){
+	$.ajax({
+        type:"POST",
+        url:"platform_al/mod11/searchNewsByTime",
+        success:function(data){
+            var li="";
+            $.each(data,function(index,val){
+                if(index<1){
+                    li=`<li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">${val.pubtime}</h4>
+                                <div class="media-main custom-lrmove">
+                                    <p class="custom-lrmove">
+                                        ${val.title}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>`
+                }
+
+            })
+            listDui("#realTime-visitList",38,li,6000,"left");
+        }
+    })
+},5000)
+
+function listDui(divId,marginTop,li,time,type){
+   // console.log($(divId).children("li:first-child").height())
+     setInterval(function(){ 
+         var first=$(divId).find("li:first-child");
+         var last= $(divId).find("li:last-child");
+         // first.css("marginTop","48px"); 
+         first.animate({
+             marginTop:marginTop+'px'
+         });
+         console.log(first.find(".media-main")).html();
+         setTimeout(function(){
+             $(divId).prepend(li).fadeIn(1000);
+             if(type=="left"){
+             	toAddLeftPoint(2500);//
+             }else if(type=="right"){
+             	toAddRightPoint(2500);
+             }
+            first.css("marginTop","0px");
+             last.remove();
+         },2000);
+
+     },time)
+} 
+	
+</script> -->
+<script src="cesium/js/dui/init.js"></script>
+<script src="cesium/js/dui/news.js"></script>
+<script src="cesium/js/dui/startup.js"></script>
+<script src="cesium/js/dui/move.js"></script>
+<!--  <script src="cesium/js/listMove.js"></script> -->

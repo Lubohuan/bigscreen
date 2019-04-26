@@ -1,0 +1,258 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@font-face {/*苹方字体*/
+  font-family: 'pingfang';
+  src: url('../fonts/pingfang.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face { /*电子字体*/
+  font-family:'electronicFont';
+  src: url("../fonts/DS-DIGIT.TTF");
+}
+#hompage {
+  font-family: 'pingfang', 'Avenir', Helvetica, Arial, 'Microsoft YaHei', 'PingFang SC';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background:rgba(8,12,39,.9);
+}
+
+#maincontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  color: #fff;
+  /* color: #DBE1FF; */
+  font-size: 16px;
+}
+
+#body {
+  height: 1080px;
+  width: 1920px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  /* display: flex;
+    flex-direction: column; */
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+}
+
+.flex-inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex
+}
+
+.row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse
+}
+
+.column {
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.column,
+.column-reverse {
+  -webkit-box-orient: vertical
+}
+
+.column-reverse {
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+
+.wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse
+}
+
+.jc-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.jc-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.jc-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+.jc-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.jc-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.ai-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+
+.ai-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.ai-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+
+.ai-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch
+}
+
+.ac-center {
+  -ms-flex-line-pack: center;
+  align-content: center
+}
+
+.ac-end {
+  -ms-flex-line-pack: end;
+  align-content: flex-end
+}
+
+.ac-between {
+  -ms-flex-line-pack: justify;
+  align-content: space-between
+}
+
+.ac-around {
+  -ms-flex-line-pack: distribute;
+  align-content: space-around
+}
+
+.ac-stretch {
+  -ms-flex-line-pack: stretch;
+  align-content: stretch
+}
+
+.equal,
+.flex-1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.flex-2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  min-width: 0;
+}
+
+.flex-3 {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  min-width: 0;
+}
+
+.flex-4 {
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+  min-width: 0;
+}
+
+.flex-5 {
+  -webkit-box-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  min-width: 0;
+}
+
+.equal-auto {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+
+.equal-no {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
