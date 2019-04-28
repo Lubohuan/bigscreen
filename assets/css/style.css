@@ -77,8 +77,9 @@ a:hover {
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  /* display: flex;
-    flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  /* transition-duration: .1s;  */
   transition: all .1s cubic-bezier(.4, 0, .2, 1);
 }
 

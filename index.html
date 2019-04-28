@@ -16,6 +16,7 @@
     <title>大屏仓库</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/liMarquee/css/liMarquee.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/app.css">
@@ -50,6 +51,22 @@
 </html>
 
 <body>
+    <!-- 
+        	<div class="bg1 wow fadeInUp"></div>
+        <li class="item item1 wow bounceInLeft"></li>
+				<li class="item item2 wow bounceInLeft"></li>
+				<li class="item item3 wow bounceInLeft"></li>
+				<li class="item item4 wow bounceInLeft"></li>
+				<li class="item item5 wow bounceInRight"></li>
+				<li class="item item6 wow bounceInRight"></li>
+				<li class="item item7 wow bounceInRight"></li>
+				<li class="item item8 wow bounceInRight"></li>
+
+        <li class="item item2 wow fadeInUpBig" data-wow-delay="0.3s"></li>
+			<li class="item item3 wow fadeInUpBig" data-wow-delay="0.6s"></li>
+			<li class="item item4 wow fadeInUpBig" data-wow-delay="0.9s"></li>
+			<li class="item item5 wow fadeInUpBig" data-wow-delay="1.2s"></li>
+     -->
     <div id="hompage">
         <div id="maincontainer">
             <div id="body" class="pagePadding">
@@ -62,8 +79,10 @@
                 </div>
                 <div class="section">
                     <div class="maincontent m1 flex jc-between">
-                        <div class="left">
-                            <div class="jbox">
+                        <!-- 可以加入 data-wow-duration（动画持续时间）和 data-wow-delay（动画延迟时间）属性，
+                            data-wow-iteration="2"(动画执行次数) 和 data-wow-offset="10" （距离可视区域多少开始执行动画）-->
+                        <div class="left wow bounceInLeft"  data-wow-duration="1s" data-wow-delay="0s">
+                            <div  class="jbox ">
                                 <div class="jbox-title clearfix special-title" style="padding-top:0;">
                                     <div class="h5 pull-left">
                                         <div class="site-item" style="width:75px;height:20px;border:none;">
@@ -168,7 +187,7 @@
                             </div>
 
                         </div>
-                        <div class="center">
+                        <div class="center wow fadeInUp">
                             <div class="jbox">
                                 <div class="jbox-title clearfix" style="padding-top:0;">
                                     <div class="h5 pull-left twinkling">
@@ -188,7 +207,7 @@
                             </div>
 
                         </div>
-                        <div class="right">
+                        <div class="right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
                             <div class="ibox">
                                 <div class="ibox-title ibox-title-special"></div>
                                 <div class="ibox-content">
@@ -306,6 +325,7 @@
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/echarts.js"></script>
     <script src="assets/js/clock.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/liMarquee/js/jquery.liMarquee.js"></script>
     <script src="assets/scroll/init.js"></script>
     <script src="assets/scroll/news.js"></script>
@@ -316,9 +336,19 @@
        
         $('.dowebok').liMarquee({
             direction: 'up',
+            runshort: false,
             scrolldelay:1
         });
-      
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+            var wow = new WOW({
+                boxClass: 'wow',//需要执行动画的元素的 class
+                animateClass: 'animated',//animation.css 动画的 class
+                offset: 0,//距离可视区域多少开始执行动画
+                mobile: true,//是否在移动设备上执行动画
+                live: true//异步加载的内容是否有效
+            });
+            wow.init();
+        };
       
     </script>
 </body>

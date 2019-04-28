@@ -33,11 +33,12 @@
 /*每一个模块的样式*/
 .ibox{
     height:100%;
-    padding:0 15px;
+   
 }
 .ibox-title{
     height: 40px;
     line-height: 40px;
+    padding:0 15px;
     
 }
 .ibox-title-special {
@@ -48,6 +49,7 @@
 .ibox-content{
     height:calc(100% - 60px);
     overflow: hidden;
+    padding:0 15px;
 }
 .jq22 { width: 790px; height: 200px; margin: 100px auto; font-size: 14px;}
 .jq22 ul { margin: 0; line-height: 30px;}
