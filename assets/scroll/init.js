@@ -95,7 +95,7 @@
         /**
          * 新闻配置项
          */
-        'moveVerticalDelay': 10000, //单位（ms）,垂直滚动间隔
+        'moveVerticalDelay': 3000, //单位（ms）,垂直滚动间隔
         'moveHorizontalSpeed': 30, //单位（像素/s）,水平滚动速度
         'moveHorizontalDelay': 2000, //单位（ms）,水平滚动间隔
         'topItemsThreshold': 5, //单位（条）,置顶的信息条目最多显示的数量，且不会垂直滚动

@@ -15,9 +15,31 @@
     <meta name="author" content="lbh">
     <title>大屏仓库</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/liMarquee/css/liMarquee.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+        .dowebok {
+            width: 100%;
+            height:223px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .dowebok ul {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            
+        }
+        .dowebok a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 30px;
+        }
+
+    </style>
     <!-- HTML5----IE低版本支持HTML5标签方法，css 浏览器网页兼容性 -->
     <!--[if lt IE9]>
             <script src="assets/js/html5shiv.min.js"></script>
@@ -170,7 +192,7 @@
                             <div class="ibox">
                                 <div class="ibox-title ibox-title-special"></div>
                                 <div class="ibox-content">
-                                        <div id="echart-pie" style="width:100%;height:100%"></div>
+                                    <div id="echart-pie" style="width:100%;height:100%"></div>
                                 </div>
                             </div>
                         </div>
@@ -188,40 +210,93 @@
                         </div>
                         <div class="center">
                             <div class="ibox">
-                                    <div class="ibox-title">
+                                <div class="ibox-title">
 
-                                        </div>
-                                        <div class="ibox-content">
-                                            <div id="echart-twoline" style="width: 100%;height: 100%"></div>
-                                        </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div id="echart-twoline" style="width: 100%;height: 100%"></div>
+                                </div>
                             </div>
-                           
+
                         </div>
                         <div class="right">
-                                <div class="ibox">
-                                        <div class="ibox-title">
-    
-                                            </div>
-                                            <div class="ibox-content">
-                                                    <div id="echart-writebar" style="width: 100%;height: 100%"></div>
-                                              
-                                            </div>
+                            <div class="ibox">
+                                <div class="ibox-title">
+
                                 </div>
+                                <div class="ibox-content">
+                                    <div id="echart-writebar" style="width: 100%;height: 100%"></div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="maincontent m3 flex jc-between">
                         <div class="left">
-                                <div class="ibox">
-                                        <div class="ibox-title">
-    
-                                            </div>
-                                            <div class="ibox-content">
-                                                    <div id="echart-getbar" style="width: 100%;height: 100%"></div>
-                                            </div>
+                            <div class="ibox">
+                                <div class="ibox-title">
+
                                 </div>
+                                <div class="ibox-content">
+                                    <div id="echart-getbar" style="width: 100%;height: 100%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="center"></div>
-                        <div class="right"></div>
+                        <div class="center">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    文字滚动
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="dowebok">
+                                        <ul>
+                                            <li>
+                                                <a href="http://www.dowebok.com/187.html">Smoothslides –
+                                                    可平移的jQuery幻灯片插件</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/77.html">jQuery全屏滚动插件fullPage.js</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/131.html">WOW.js – 让页面滚动更有趣</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/139.html">让IE7 IE8支持CSS3
+                                                    background-size属性</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/117.html">shCircleLoader – jQuery
+                                                    Loading效果插件</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/185.html">jQuery cForm –
+                                                    jQuery表单美化插件</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/177.html">Quttons – Quantum
+                                                    Paper风格按钮</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/173.html">Ideal Image Slider –
+                                                    简单的纯JS幻灯片</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/156.html">evenZoom – jQuery放大镜插件</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.dowebok.com/155.html">DAD – jQuery拖拽/拖放插件</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="right">
+
+                        </div>
                     </div>
                 </div>
                 <div class="footer"></div>
@@ -231,9 +306,19 @@
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/echarts.js"></script>
     <script src="assets/js/clock.js"></script>
+    <script src="assets/liMarquee/js/jquery.liMarquee.js"></script>
     <script src="assets/scroll/init.js"></script>
     <script src="assets/scroll/news.js"></script>
     <script src="assets/scroll/move.js"></script>
     <script src="assets/scroll/startup.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+       
+        $('.dowebok').liMarquee({
+            direction: 'up',
+            scrolldelay:1
+        });
+      
+      
+    </script>
 </body>
